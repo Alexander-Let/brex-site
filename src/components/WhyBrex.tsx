@@ -117,7 +117,7 @@ export function WhyBrex() {
                   alt={t.why.mascotAlt}
                   width={480}
                   height={480}
-                  className="ink-border ink-shadow w-full max-w-[420px] bg-paper-deep object-cover will-change-transform"
+                  className="cutout w-full max-w-[420px] bg-paper-deep object-cover will-change-transform [--cutout-tilt:1.4deg]"
                   style={{
                     transformStyle: 'preserve-3d',
                     rotateX: reduce ? 0 : springRotX,

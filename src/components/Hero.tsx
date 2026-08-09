@@ -74,7 +74,7 @@ export function Hero() {
           alt={t.hero.mascotAlt}
           width={720}
           height={720}
-          className="ink-border ink-shadow w-full max-w-[560px] bg-paper-deep object-cover"
+          className="cutout w-full max-w-[560px] bg-paper-deep object-cover"
           decoding="async"
           fetchPriority="high"
         />

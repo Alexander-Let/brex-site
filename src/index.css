@@ -67,4 +67,11 @@
   .ink-shadow {
     box-shadow: 3px 3px 0 var(--color-line);
   }
+
+  /* Newspaper cutout: cream margin + soft shadow + slight tilt */
+  .cutout {
+    border: 8px solid #f7efdd;
+    box-shadow: 0 2px 10px rgb(42 38 34 / 0.35);
+    rotate: var(--cutout-tilt, -1.2deg);
+  }
 }
