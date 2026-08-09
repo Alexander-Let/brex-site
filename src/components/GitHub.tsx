@@ -32,6 +32,7 @@ export function GitHubSection() {
               href={LINKS.license}
               target="_blank"
               rel="noopener noreferrer"
+              magnetic={false}
               className="font-medium text-ink-muted no-underline"
             >
               {t.github.license}
