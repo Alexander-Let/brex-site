@@ -68,7 +68,6 @@ export function Install() {
             href={LINKS.releases}
             target="_blank"
             rel="noopener noreferrer"
-            magnetic={false}
             className="items-center gap-2 font-semibold text-mustard no-underline"
           >
             {t.install.releases}
