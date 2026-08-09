@@ -1,4 +1,4 @@
-import type { Locale } from '../i18n/types'
+import type { Locale } from '../i18n/messages'
 
 export const LINKS = {
   github: 'https://github.com/Alexander-Let/Brex',

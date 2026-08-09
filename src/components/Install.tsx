@@ -3,7 +3,7 @@ import { ArrowSquareOut } from '@phosphor-icons/react'
 import { LINKS } from '../content/links'
 import { useLocale } from '../i18n/LocaleContext'
 import { springSnappy } from '../lib/motion'
-import { CopyButton } from './CopyButton'
+import { CodeBlock } from './CodeBlock'
 import { Magnetic } from './Magnetic'
 import { Reveal, Stagger, StaggerItem } from './Reveal'
 
@@ -44,22 +44,13 @@ export function Install() {
           {blocks.map((block) => (
             <StaggerItem key={block.code}>
               <motion.div
-                className="ink-border ink-shadow bg-paper-light"
                 whileHover={
                   reduce
                     ? undefined
                     : { y: -3, transition: springSnappy }
                 }
               >
-                <div className="flex items-center justify-between gap-3 border-b-[2.5px] border-ink bg-ink px-3 py-2">
-                  <span className="font-mono text-xs font-medium tracking-wide text-paper-light">
-                    {block.title}
-                  </span>
-                  <CopyButton text={block.code} />
-                </div>
-                <pre className="overflow-x-auto p-4 font-mono text-[13px] leading-relaxed text-ink md:text-sm">
-                  <code>{block.code}</code>
-                </pre>
+                <CodeBlock code={block.code} label={block.title} />
               </motion.div>
             </StaggerItem>
           ))}

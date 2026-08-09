@@ -70,7 +70,7 @@ export function Hero() {
         transition={{ duration: reduce ? 0 : 0.65, ease: easeOut, delay: 0.22 }}
       >
         <img
-          src="/mascot-desk.png"
+          src={`${import.meta.env.BASE_URL}mascot-desk.png`}
           alt={t.hero.mascotAlt}
           width={720}
           height={720}

@@ -113,7 +113,7 @@ export function WhyBrex() {
               <div style={{ perspective: 900 }}>
                 <motion.img
                   ref={mascot}
-                  src="/mascot-shoebill.png"
+                  src={`${import.meta.env.BASE_URL}mascot-shoebill.png`}
                   alt={t.why.mascotAlt}
                   width={480}
                   height={480}

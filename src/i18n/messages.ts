@@ -1,4 +1,4 @@
-import type { Locale } from './types'
+export type Locale = 'en' | 'ru'
 
 type Capability = { title: string; detail: string }
 

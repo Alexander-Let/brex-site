@@ -7,8 +7,7 @@ import {
   useState,
   type ReactNode,
 } from 'react'
-import { messages } from './messages'
-import type { Locale } from './types'
+import { messages, type Locale } from './messages'
 
 const LOCALE_STORAGE_KEY = 'brex-locale'
 
@@ -32,9 +31,7 @@ function readStoredLocale(): Locale {
 }
 
 export function LocaleProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>(() =>
-    typeof window === 'undefined' ? 'en' : readStoredLocale(),
-  )
+  const [locale, setLocaleState] = useState<Locale>(readStoredLocale)
 
   const setLocale = useCallback((next: Locale) => {
     setLocaleState(next)
