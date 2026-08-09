@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
-import { List, Moon, Sun, X } from '@phosphor-icons/react'
+import { List, X } from '@phosphor-icons/react'
 import { docsHub, LINKS } from '../content/links'
 import { useLocale } from '../i18n/LocaleContext'
 import { easeOut, hoverLift, springSnappy, tapScale } from '../lib/motion'
@@ -10,16 +10,6 @@ export function Nav() {
   const { t, locale, toggleLocale } = useLocale()
   const reduce = useReducedMotion()
   const [open, setOpen] = useState(false)
-  const [dark, setDark] = useState(() => document.documentElement.classList.contains('dark'))
-
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', dark)
-    try {
-      localStorage.setItem('brex-theme', dark ? 'dark' : 'light')
-    } catch {
-      /* ignore */
-    }
-  }, [dark])
 
   const nav = [
     { href: '#why', label: t.nav.why },
@@ -91,26 +81,6 @@ export function Nav() {
                 transition={{ duration: 0.2, ease: easeOut }}
               >
                 {toggleLabel}
-              </motion.span>
-            </AnimatePresence>
-          </Magnetic>
-
-          <Magnetic
-            onClick={() => setDark((v) => !v)}
-            className="ink-border ink-shadow flex h-9 w-9 items-center justify-center bg-mustard text-ink"
-            aria-label={t.themeToggle.aria}
-            title={t.themeToggle.aria}
-          >
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.span
-                key={dark ? 'sun' : 'moon'}
-                initial={reduce ? false : { opacity: 0, rotate: -40, scale: 0.8 }}
-                animate={{ opacity: 1, rotate: 0, scale: 1 }}
-                exit={{ opacity: 0, rotate: 40, scale: 0.8 }}
-                transition={{ duration: 0.2, ease: easeOut }}
-                className="inline-flex"
-              >
-                {dark ? <Sun size={18} weight="bold" /> : <Moon size={18} weight="bold" />}
               </motion.span>
             </AnimatePresence>
           </Magnetic>

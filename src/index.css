@@ -21,22 +21,8 @@
   --color-mustard: #c5a059;
   --color-mustard-deep: #a8863f;
   --color-line: #2a2622;
-  --color-cream: #e4cba8;
 
   --radius-ink: 6px;
-}
-
-:root.dark {
-  --color-paper: #1f1b16;
-  --color-paper-deep: #171310;
-  --color-paper-light: #2a251f;
-  --color-ink: #ece0c9;
-  --color-ink-muted: #b3a48b;
-  --color-slate: #20282f;
-  --color-slate-deep: #8fa5b8;
-  --color-mustard: #cfa85e;
-  --color-mustard-deep: #e0bd7a;
-  --color-line: #ece0c9;
 }
 
 @layer base {

@@ -35,14 +35,14 @@ export function Language() {
   return (
     <section
       id="language"
-      className="border-t-[2.5px] border-ink bg-slate text-cream"
+      className="border-t-[2.5px] border-ink bg-slate text-paper-light"
     >
       <div className="mx-auto max-w-[1400px] px-4 py-16 md:px-8 md:py-24">
         <Reveal>
-          <h2 className="font-display text-3xl tracking-wide text-cream md:text-5xl">
+          <h2 className="font-display text-3xl tracking-wide text-paper-light md:text-5xl">
             {t.language.title}
           </h2>
-          <p className="mt-4 max-w-[60ch] text-base leading-relaxed text-cream/85 md:text-lg">
+          <p className="mt-4 max-w-[60ch] text-base leading-relaxed text-paper-light/85 md:text-lg">
             {t.language.lead}
           </p>
         </Reveal>
@@ -79,7 +79,7 @@ export function Language() {
         </Stagger>
 
         <motion.div
-          className="mt-4 ink-border bg-ink/25 px-4 py-3 text-sm leading-relaxed text-cream/90 md:text-base"
+          className="mt-4 ink-border bg-ink/25 px-4 py-3 text-sm leading-relaxed text-paper-light/90 md:text-base"
           role="status"
           aria-live="polite"
           key={active ?? 'none'}
@@ -90,11 +90,11 @@ export function Language() {
           {active && def ? (
             <>
               <span className="font-mono font-medium text-mustard">{active}</span>
-              <span className="text-cream/50"> - </span>
+              <span className="text-paper-light/50"> - </span>
               {def}
             </>
           ) : (
-            <span className="text-cream/70">{t.language.selectHint}</span>
+            <span className="text-paper-light/70">{t.language.selectHint}</span>
           )}
         </motion.div>
 
