@@ -20,6 +20,9 @@ type Messages = {
     toEn: string
     aria: string
   }
+  themeToggle: {
+    aria: string
+  }
   hero: {
     brand: string
     headline: string
@@ -107,6 +110,9 @@ export const messages: Record<Locale, Messages> = {
       toRu: 'RU',
       toEn: 'EN',
       aria: 'Switch site language',
+    },
+    themeToggle: {
+      aria: 'Switch color theme',
     },
     hero: {
       brand: 'Brex',
@@ -234,6 +240,9 @@ export const messages: Record<Locale, Messages> = {
       toRu: 'RU',
       toEn: 'EN',
       aria: 'Переключить язык сайта',
+    },
+    themeToggle: {
+      aria: 'Переключить тему оформления',
     },
     hero: {
       brand: 'Brex',

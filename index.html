@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/mascot-shoebill.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      try {
+        const t = localStorage.getItem('brex-theme')
+        if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches))
+          document.documentElement.classList.add('dark')
+      } catch {}
+    </script>
     <meta
       name="description"
       content="Brex is a compilable spec language for AI coding agents. Write prompts like code: roles, rules, tasks, gates — compiled to IR and Markdown prompts."

@@ -28,14 +28,14 @@ export function Install() {
   return (
     <section
       id="install"
-      className="border-t-[2.5px] border-ink bg-slate text-paper-light"
+      className="border-t-[2.5px] border-ink bg-slate text-cream"
     >
       <div className="mx-auto max-w-[1400px] px-4 py-16 md:px-8 md:py-24">
         <Reveal className="max-w-3xl">
-          <h2 className="font-display text-3xl tracking-wide text-paper-light md:text-5xl">
+          <h2 className="font-display text-3xl tracking-wide text-cream md:text-5xl">
             {t.install.title}
           </h2>
-          <p className="mt-4 max-w-[55ch] text-base leading-relaxed text-paper-light/85 md:text-lg">
+          <p className="mt-4 max-w-[55ch] text-base leading-relaxed text-cream/85 md:text-lg">
             {t.install.lead}
           </p>
         </Reveal>
@@ -57,7 +57,7 @@ export function Install() {
         </Stagger>
 
         <Reveal
-          className="mt-8 max-w-[65ch] font-mono text-sm leading-relaxed text-paper-light/75"
+          className="mt-8 max-w-[65ch] font-mono text-sm leading-relaxed text-cream/75"
           soft
         >
           <p>brex check · build · run · explain · doctor · drift · allow · hook</p>
